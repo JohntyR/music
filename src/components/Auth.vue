@@ -152,6 +152,7 @@
               <vee-field
                 type="text"
                 name="name"
+                :rules="'required'"
                 class="
                   block
                   w-full
@@ -166,6 +167,7 @@
                 "
                 placeholder="Enter Name"
               />
+              <ErrorMessage class="text-red-600" name="name"/>
             </div>
             <!-- Email -->
             <div class="mb-3">
@@ -307,6 +309,15 @@ export default {
   data() {
     return {
       tab: 'login',
+      schema: {
+        name: 'required',
+        email: '',
+        age: '',
+        password: '',
+        confirm_password: '',
+        country: '',
+        tos: '',
+      },
     };
   },
   methods: {
