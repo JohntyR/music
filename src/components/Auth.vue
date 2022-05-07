@@ -145,12 +145,13 @@
             </button>
           </form>
           <!-- Registration Form -->
-          <form v-show="tab === 'register'">
+          <vee-form v-show="tab === 'register'">
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
-              <input
+              <vee-field
                 type="text"
+                name="name"
                 class="
                   block
                   w-full
@@ -262,7 +263,7 @@
                   rounded
                 "
               >
-                <option value="USA">USA</option>
+                <option value="AUS">AUS</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Germany">Germany</option>
               </select>
@@ -291,7 +292,7 @@
             >
               Submit
             </button>
-          </form>
+          </vee-form>
         </div>
       </div>
     </div>
